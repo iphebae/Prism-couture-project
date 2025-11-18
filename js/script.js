@@ -16,7 +16,7 @@ if (menuIcon && navLinks) {
    FADE-IN ELEMENTS ON SCROLL
 ====================================================== */
 const revealElements = document.querySelectorAll(
-  "section, .showcase-card, .about-image img, .product-card, .bs-card, .trust-card, .event-card"
+  "section, .showcase-card, .about-image img, .product-card, .bs-card, .trust-card, .event-card, .trustee-card"
 );
 
 function revealOnScroll() {
@@ -30,17 +30,8 @@ function revealOnScroll() {
   });
 }
 
-// Run on scroll
 window.addEventListener("scroll", revealOnScroll);
-
-// Run immediately on page load
-window.addEventListener("load", () => {
-  revealOnScroll();
-  // Force trigger after a short delay to ensure everything is loaded
-  setTimeout(revealOnScroll, 100);
-});
-
-// Also trigger on DOMContentLoaded
+window.addEventListener("load", revealOnScroll);
 document.addEventListener("DOMContentLoaded", revealOnScroll);
 
 
@@ -69,7 +60,7 @@ if (heroBG) {
 
 
 /* ======================================================
-   PRODUCT FILTERING (For products.html)
+   PRODUCTS PAGE – FILTERING
 ====================================================== */
 const filterBtns = document.querySelectorAll(".filter-btn");
 const productCards = document.querySelectorAll(".product-card");
@@ -77,14 +68,13 @@ const productCards = document.querySelectorAll(".product-card");
 if (filterBtns.length > 0 && productCards.length > 0) {
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      // Change active button
       document.querySelector(".filter-btn.active")?.classList.remove("active");
       btn.classList.add("active");
 
-      const filter = btn.getAttribute("data-filter");
+      const filter = btn.dataset.filter;
 
       productCards.forEach((card) => {
-        const category = card.getAttribute("data-category");
+        const category = card.dataset.category;
 
         if (filter === "all" || category.includes(filter)) {
           card.style.display = "block";
@@ -98,3 +88,21 @@ if (filterBtns.length > 0 && productCards.length > 0) {
     });
   });
 }
+
+
+/* ======================================================
+   TRUSTEES PAGE – STAGGERED FADE-IN
+====================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+  const trusteeCards = document.querySelectorAll(".trustee-card");
+
+  if (trusteeCards.length > 0) {
+    trusteeCards.forEach((card, i) => {
+      card.style.opacity = "0";
+      setTimeout(() => {
+        card.style.transition = "0.8s ease";
+        card.style.opacity = "1";
+      }, i * 200);
+    });
+  }
+});

@@ -1514,3 +1514,79 @@ section, .showcase-card, .about-image img {
     flex-direction: column;
   }
 }
+/* Trustees Page Styling */
+
+.trustees-hero {
+    height: 65vh;
+    background: url('../images/bg.jpg') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.trustees-hero-text h1 {
+    font-size: 55px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.trustees-hero-text p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #eaeaea;
+}
+
+.trustees-section {
+    padding: 80px 6%;
+    background: #f8f8f8;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #111;
+    font-weight: 600;
+}
+
+.trustees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+.trustee-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: all .3s ease;
+}
+
+.trustee-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.trustee-card:hover {
+    transform: translateY(-10px);
+}
+
+.trustee-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.trustee-info h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+}
+
+.trustee-info p {
+    color: #777;
+    margin-top: 5px;
+}
