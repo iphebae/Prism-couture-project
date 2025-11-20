@@ -338,11 +338,12 @@ body {
 }
 
 /* ===== FADE-IN ANIMATION ===== */
-section, .showcase-card, .about-image img {
+section, .showcase-card, .about-image img, .product-card {
   opacity: 0;
   transform: translateY(40px);
   transition: .9s ease;
 }
+
 
 .fade {
   opacity: 1 !important;

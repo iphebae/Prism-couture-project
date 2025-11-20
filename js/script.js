@@ -16,7 +16,7 @@ if (menuIcon && navLinks) {
    FADE-IN ELEMENTS ON SCROLL
 ====================================================== */
 const revealElements = document.querySelectorAll(
-  "section, .showcase-card, .about-image img, .product-card, .bs-card, .trust-card, .event-card, .trustee-card"
+  "section, .showcase-card, .about-image img, .bs-card, .trust-card, .event-card, .trustee-card, .product-card"
 );
 
 function revealOnScroll() {
@@ -53,21 +53,23 @@ const heroBG = document.querySelector(".hero-bg");
 
 if (heroBG) {
   window.addEventListener("scroll", () => {
-    let scrollVal = window.scrollY;
-    heroBG.style.transform = `translateY(${scrollVal * 0.25}px)`;
+    heroBG.style.transform = `translateY(${window.scrollY * 0.25}px)`;
   });
 }
 
 
 /* ======================================================
-   PRODUCTS PAGE – FILTERING
+   PRODUCTS PAGE – FILTERING (FIXED)
 ====================================================== */
+
 const filterBtns = document.querySelectorAll(".filter-btn");
 const productCards = document.querySelectorAll(".product-card");
 
 if (filterBtns.length > 0 && productCards.length > 0) {
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
+      
+      // Change active button
       document.querySelector(".filter-btn.active")?.classList.remove("active");
       btn.classList.add("active");
 
@@ -77,9 +79,13 @@ if (filterBtns.length > 0 && productCards.length > 0) {
         const category = card.dataset.category;
 
         if (filter === "all" || category.includes(filter)) {
+          // SHOW CARD
           card.style.display = "block";
+          card.style.opacity = "1";         // IMPORTANT FIX
           setTimeout(() => card.classList.add("fade"), 10);
+
         } else {
+          // HIDE CARD
           card.classList.remove("fade");
           card.style.opacity = "0";
           setTimeout(() => (card.style.display = "none"), 300);

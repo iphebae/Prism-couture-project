@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,24 +13,20 @@
 <!-- HEADER -->
 <header class="header">
   <nav class="navbar">
-  <h1 class="logo">LuxeMode</h1>
+    <h1 class="logo">LuxeMode</h1>
 
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="trustees.html">Trustees</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="trustees.html">Trustees</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
 
-  <!-- Mobile Menu Icon -->
-  <div class="menu-icon" id="menu-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
-
+    <div class="menu-icon" id="menu-icon">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
 
   <div class="marquee-box">
     <marquee class="marq">🔥 Premium Arrivals • Handcrafted Luxury • New Season Launch • Shop the Best Deals Today</marquee>
@@ -43,71 +40,78 @@
   <p>Explore luxury pieces crafted for timeless elegance.</p>
 </section>
 
-
 <!-- FILTER BUTTONS -->
 <div class="product-filters">
   <button class="filter-btn active" data-filter="all">All</button>
   <button class="filter-btn" data-filter="men">Men</button>
-  <button class="filter-btn" data-filter="women">Women</button>
+  <button class="filter-btn" data-filter="female">Women</button>
   <button class="filter-btn" data-filter="new">New</button>
   <button class="filter-btn" data-filter="sale">Sale</button>
 </div>
 
 
-<!-- ⭐ PRODUCT GRID — 3 x 3 LUXURY GRID -->
+<!-- PRODUCT GRID -->
 <section class="products-grid">
 
-  <!-- 9 products in premium uniform grid -->
-  <div class="product-card" data-category="women new">
+  <!-- WOMEN -->
+  <div class="product-card" data-category="female">
     <img src="images/1.jpg">
-    <div class="product-info"><h3>Elegant Gold Dress</h3><p>₦45,000</p></div>
+    <div class="product-info"><h3>Jewelry</h3><p>₦45,000</p></div>
   </div>
 
-  <div class="product-card" data-category="men sale">
-    <img src="images/2.jpg">
-    <div class="product-info"><h3>Designer Blazer</h3><p>₦30,000</p></div>
-  </div>
-
-  <div class="product-card" data-category="women">
-    <img src="images/3.jpg">
-    <div class="product-info"><h3>Silk Gown</h3><p>₦55,000</p></div>
-  </div>
-
-  <div class="product-card" data-category="men new">
-    <img src="images/4.jpg">
-    <div class="product-info"><h3>Street Jacket</h3><p>₦37,000</p></div>
-  </div>
-
-  <div class="product-card" data-category="women sale">
-    <img src="images/5.jpg">
-    <div class="product-info"><h3>Velvet Dress</h3><p>₦28,000</p></div>
-  </div>
-
+  <!-- MEN - IMAGE 2 -->
   <div class="product-card" data-category="men">
+    <img src="images/2.jpg">
+    <div class="product-info"><h3>Wallet</h3><p>₦30,000</p></div>
+  </div>
+
+  <!-- WOMEN -->
+  <div class="product-card" data-category="female">
+    <img src="images/3.jpg">
+    <div class="product-info"><h3>Dior bag</h3><p>₦55,000</p></div>
+  </div>
+
+  <!-- MEN - IMAGE 4 -->
+  <div class="product-card" data-category="men">
+    <img src="images/4.jpg">
+    <div class="product-info"><h3>Dr matins shoe</h3><p>₦37,000</p></div>
+  </div>
+
+  <!-- WOMEN SALE -->
+  <div class="product-card" data-category="female sale">
+    <img src="images/5.jpg">
+    <div class="product-info"><h3>heels</h3><p>₦28,000</p></div>
+  </div>
+
+  <!-- WOMEN NEW -->
+  <div class="product-card" data-category="female new">
     <img src="images/6.jpg">
-    <div class="product-info"><h3>Casual Shirt</h3><p>₦18,000</p></div>
+    <div class="product-info"><h3>Uk gown</h3><p>₦18,000</p></div>
   </div>
 
-  <div class="product-card" data-category="women new">
+  <!-- MEN - IMAGE 7 -->
+  <div class="product-card" data-category="men">
     <img src="images/7.jpg">
-    <div class="product-info"><h3>Satin Top</h3><p>₦22,000</p></div>
+    <div class="product-info"><h3>shoe</h3><p>₦22,000</p></div>
   </div>
 
-  <div class="product-card" data-category="women">
+  <!-- WOMEN -->
+  <div class="product-card" data-category="female">
     <img src="images/8.jpg">
     <div class="product-info"><h3>Evening Dress</h3><p>₦49,000</p></div>
   </div>
 
-  <div class="product-card" data-category="new">
+  <!-- MEN - IMAGE 9 -->
+  <div class="product-card" data-category="men">
     <img src="images/9.jpg">
-    <div class="product-info"><h3>Tailored Shirt</h3><p>₦25,000</p></div>
+    <div class="product-info"><h3>Tailored Suit</h3><p>₦25,000</p></div>
   </div>
 
 </section>
 
 
 
-<!-- ⭐ PREMIUM BEST SELLERS SECTION -->
+<!-- BEST SELLERS -->
 <section class="best-sellers">
   <div class="bs-header">
     <h2>Best Sellers</h2>
@@ -116,50 +120,32 @@
 
   <div class="best-layer-grid">
 
-    <!-- LEFT STACK -->
     <div class="bs-left">
       <div class="bs-card small">
         <img src="images/11.jpg">
-        <div class="bs-info">
-          <h3>Premium Silk Blouse</h3>
-          <p>₦26,000</p>
-        </div>
+        <div class="bs-info"><h3>Premium Silk Blouse</h3><p>₦26,000</p></div>
       </div>
 
       <div class="bs-card small">
         <img src="images/3.jpg">
-        <div class="bs-info">
-          <h3>Signature Gold Dress</h3>
-          <p>₦50,000</p>
-        </div>
+        <div class="bs-info"><h3>Signature Gold Dress</h3><p>₦50,000</p></div>
       </div>
     </div>
 
-    <!-- CENTERPIECE -->
     <div class="bs-card large">
       <img src="images/10.jpg">
-      <div class="bs-info">
-        <h3>Luxury Evening Dress</h3>
-        <p>₦60,000</p>
-      </div>
+      <div class="bs-info"><h3>Luxury Evening Dress</h3><p>₦60,000</p></div>
     </div>
 
-    <!-- RIGHT STACK -->
     <div class="bs-right">
       <div class="bs-card small">
         <img src="images/4.jpg">
-        <div class="bs-info">
-          <h3>Urban Luxe Jacket</h3>
-          <p>₦37,000</p>
-        </div>
+        <div class="bs-info"><h3>Urban Luxe Jacket</h3><p>₦37,000</p></div>
       </div>
 
       <div class="bs-card small">
         <img src="images/5.jpg">
-        <div class="bs-info">
-          <h3>Royal Velvet Dress</h3>
-          <p>₦28,000</p>
-        </div>
+        <div class="bs-info"><h3>Royal Velvet Dress</h3><p>₦28,000</p></div>
       </div>
     </div>
 
@@ -168,27 +154,15 @@
 
 
 
-
-<!-- ⭐ SECTION 3 — SEASONAL COLLECTION -->
+<!-- SEASONAL COLLECTION -->
 <section class="season-collection">
   <h2>Seasonal Collection</h2>
   <p>Exclusive curated looks for this season.</p>
 
   <div class="season-row">
-    <div class="season-card">
-      <img src="images/4.jpg">
-      <h4>Winter Edition</h4>
-    </div>
-
-    <div class="season-card">
-      <img src="images/6.jpg">
-      <h4>Urban Mode</h4>
-    </div>
-
-    <div class="season-card">
-      <img src="images/5.jpg">
-      <h4>Royal Classics</h4>
-    </div>
+    <div class="season-card"><img src="images/4.jpg"><h4>Winter Edition</h4></div>
+    <div class="season-card"><img src="images/6.jpg"><h4>Urban Mode</h4></div>
+    <div class="season-card"><img src="images/5.jpg"><h4>Royal Classics</h4></div>
   </div>
 </section>
 
@@ -197,6 +171,7 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-top">
+
     <div class="footer-col">
       <h3>LuxeMode</h3>
       <p>Where timeless elegance meets modern luxury.</p>
@@ -219,6 +194,7 @@
         <button>Subscribe</button>
       </div>
     </div>
+
   </div>
 
   <div class="footer-bottom">© 2025 LuxeMode Fashion</div>
